@@ -64,8 +64,74 @@ Navigate back to the CML workspace and notice a new project named ```CML Project
 
 Open the model deployment and, once it has completed, enter the following sample payload in the Test Request window. Observe the output response.
 
+Test Input:
+
 ```
 {"p[1]": [354,353,352,351,354,353,312,311,314,313,352,351], "p[2]": [110,120,320,220,101,100,101,260,355,140,300,299], "n[1]": [54,53,112,151,154,153,52,51,4,53,92,71]}
+```
+
+Sample Test Output:
+
+```
+{
+    "model_deployment_crn": "crn:cdp:ml:us-west-1:558bc1d2-8867-4357-8524-311d51259233:workspace:f76bd7eb-adde-43eb-9bd9-e16ec2cb0238/c152a438-6449-465e-8685-e1cc0b9988fa",
+    "prediction": {
+        "data": {
+            "n[1]": [
+                54,
+                53,
+                112,
+                151,
+                154,
+                153,
+                52,
+                51,
+                4,
+                53,
+                92,
+                71
+            ],
+            "p[1]": [
+                354,
+                353,
+                352,
+                351,
+                354,
+                353,
+                312,
+                311,
+                314,
+                313,
+                352,
+                351
+            ],
+            "p[2]": [
+                110,
+                120,
+                320,
+                220,
+                101,
+                100,
+                101,
+                260,
+                355,
+                140,
+                300,
+                299
+            ]
+        },
+        "optimal prices": [
+            400,
+            300
+        ],
+        "optimal product quantities": [
+            80,
+            120
+        ],
+        "total revenue": 68032.83
+    },
+    "uuid": "e6700d88-f4e7-4705-988b-89e9c8092194"
+}
 ```
 
 ## Summary
